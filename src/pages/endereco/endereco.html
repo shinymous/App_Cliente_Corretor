@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Cliente</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="common-bg">
+
+  <ion-grid class="card" padding>
+    <ion-row>
+        <ion-col width-50 offset-25>
+
+
+           <h3 class="desc">{{client.nome}}</h3>
+            <h4 class="temp">{{client.endereco.cep}}</h4>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col width-100>
+            <ion-list>
+                <ion-item>
+                <strong>Localidade:</strong> {{client.endereco.localidade}}
+                </ion-item>
+                 <ion-item>
+                    <strong>Logradouro:</strong> {{client.endereco.logradouro}}
+                </ion-item>
+                 <ion-item>
+                    <strong>Complemento:</strong> {{client.endereco.complemento}}
+                </ion-item>
+                 <ion-item>
+                    <strong>Bairro:</strong> {{client.endereco.bairro}}
+                </ion-item>
+            </ion-list>
+
+        </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

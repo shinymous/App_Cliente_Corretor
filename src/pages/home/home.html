@@ -1,0 +1,42 @@
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <h2 ion-text class="text-primary">
+        <strong>StockInfo</strong> Corretor
+      </h2>
+    </div>
+
+    <form class="list-form">
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text-primary"></ion-icon>
+          Código Susep
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="credentials.codigoSusep" name="codigoSusep"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Senha
+        </ion-label>
+        <ion-input type="password" [(ngModel)]="credentials.senha"  name="senha"></ion-input>
+      </ion-item>
+    </form>
+
+    <p text-right ion-text color="black" tappable><strong>Esqueceu a Senha?</strong></p>
+
+    <div>
+      <button ion-button icon-start block tappable (click)="login(credentials)">
+        <ion-icon name="log-in"></ion-icon>
+        ENTRAR
+      </button>
+    </div>
+
+    <div text-center margin-top>
+      <span ion-text color="black" tappable>Novo aqui? <strong>Cadastre-se</strong></span>
+    </div>
+
+  </div>
+</ion-content>
